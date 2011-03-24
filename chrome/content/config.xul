@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<!DOCTYPE page SYSTEM "chrome://foxyprivy/locale/config.dtd">
+
+<window title="Configuration Foxyprivy"
+      xmlns:html="http://www.w3.org/1999/xhtml"
+      xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<script type="application/javascript" src="lib/lib_general.js"/>
+<script type="application/javascript" src="lib/lib_ssh.js" />
+<script type="application/javascript" src="lib/lib_mdp.js"/>
+<script type="application/javascript" src="lib/lib_config.js" />
+<script type="application/javascript" src="config.js"/>
+
+<vbox flex="1" style="padding: 50px; overflow: auto;">
+      <groupbox>
+           <hbox style="margin:5px ; padding:10px ;">
+		  <image style="" src="chrome://foxyprivy/skin/logo90.png"/>
+		  <label value="&titre.label;" style="font-size:large ; padding-top:30px ; padding-left:15px ;"/>
+	    </hbox>
+	    <tabbox flex="1">
+	      <tabs>
+		 <tab id="_onglet_serveurs" image="chrome://foxyprivy/skin/terminal20.png" style="width:150px; font-weight:bold; font-style:italic;" hidden="false" label="  Serveurs"/>
+		 <tab id="_onglet_putty" image="chrome://foxyprivy/skin/molette20.png" style="width:150px; font-weight:bold; font-style:italic;" hidden="true" label="  Putty"/>
+		 <tab id="_onglet_ssh" image="chrome://foxyprivy/skin/molette20.png" style="width:150px; font-weight:bold; font-style:italic;" hidden="true" label="  SSH"/>
+		 <tab id="_onglet_raz" image="chrome://foxyprivy/skin/reset20.png" style="width:150px; font-weight:bold; font-style:italic;" hidden="false" label="  RAZ"/>
+	      </tabs>
+	      <tabpanels id="config_tabpanels" flex="1">
+		  <tabpanel id="onglet_serveurs"></tabpanel>
+		  <tabpanel id="onglet_putty"></tabpanel>
+		  <tabpanel id="onglet_ssh"></tabpanel>
+		  <tabpanel id="onglet_raz"></tabpanel>
+	      </tabpanels>
+	    </tabbox>
+      </groupbox> 
+</vbox>
+
+</window>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>foxyprivy@comete.info.univ-evry.fr</em:id>
+    <em:version>0.4</em:version>
+
+    <em:targetApplication>
+      <!-- Firefox -->
+      <Description>
+        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+        <em:minVersion>4.0</em:minVersion>
+        <em:maxVersion>4.0.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+
+    <!-- front-end metadata -->
+    <em:name>FoxyPrivy</em:name>
+	<em:creator>Fiocco</em:creator>
+    <em:homepageURL>http://comete.xulfr.org/wiki/2010/projets/foxyprivy</em:homepageURL>
+    <em:description>Surfez en toute liberté !</em:description>
+
+  </Description>
+</RDF>

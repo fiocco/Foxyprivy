@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://foxyprivy/skin/foxyprivy.css" type="text/css"?>
+<overlay xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<script type="application/javascript" src="tab_ssh.js" />
+
+<tabpanel id="onglet_ssh">
+    
+ <vbox flex="1" style="margin-top:10px;">
+  <hbox>
+    <button image="chrome://foxyprivy/skin/floppy20.png" oncommand="editConfig();"/>
+    <button image="chrome://foxyprivy/skin/undo20.png" oncommand="readConfig();"/>
+  </hbox>
+  <hbox style="margin-top:10px;">
+    <!-- TAB GAUCHE --> 
+    <groupbox>
+      <!-- <caption label="Options"/> -->
+        <vbox>
+            <!-- DNS distant ? -->
+            <hbox align="center" style="padding:6px;">
+              <checkbox flex="1" label="Tunneliser requêtes DNS" id="param_dns_ssh"/>
+            </hbox>	  
+            <!-- Manage proxy ? -->
+            <hbox align="center" style="padding:6px;">
+              <checkbox flex="1" label="Manage FF proxy" id="param_proxy_ssh"/>
+            </hbox>
+            <!-- No terminal ? -->
+            <hbox align="center" style="padding:6px;">
+              <checkbox flex="1" label="Pas de shell" id="param_noterminal_ssh"/>
+            </hbox>	  
+            <!-- Compression ? -->
+            <hbox align="center" style="padding:6px;">
+                <checkbox flex="1" label="Utiliser compression" id="param_compression_ssh"/>
+            </hbox>
+            <!-- SSHPass ? -->
+            <hbox align="center" style="padding:6px;">
+                <checkbox flex="1" label="Utiliser SSHPass" id="param_sshpass"/>
+            </hbox>  
+      </vbox>
+    </groupbox>
+    
+    <!-- TAB DROITE -->
+    <groupbox style="margin-left:30px; width:370px;">
+      <!-- <caption label="SSH"/> -->
+      <vbox flex="1" style="overflow: auto;">
+        <grid>
+	  <columns>
+	    <column flex="0" />
+	    <column flex="0" />
+            <column flex="1" />
+	  </columns>
+	  <rows>
+            <!-- Term -->
+            <row>
+                <image id="state_term" style="" src=""/>
+                <label id="label_term" style="margin-top:8px;" value=""/>
+                <textbox id="path_term"/>
+            </row>
+            <!-- SSH  -->
+	    <row>
+                <image id="state_ssh" style="" src=""/>
+                <label style="margin-top:8px;" value="Chemin SSH :"/>
+                <textbox id="path_ssh"/>
+            </row>
+            <!-- SSH Pass -->
+            <row>
+                <image id="state_sshpass" style="" src=""/>
+                <label style="margin-top:8px;" value="Chemin SSHPass :"/>
+                <textbox id="path_sshpass"/>
+            </row>
+            <!-- Numero port -->
+            <row>
+                <label value=""/>
+                <label style="margin-top:8px;" value="Numero de port :"/>
+                <textbox id="param_portforward_ssh" />
+            </row>
+          </rows>
+        </grid>
+      </vbox>
+    </groupbox>
+  </hbox>  
+ </vbox>
+</tabpanel>  
+</overlay>

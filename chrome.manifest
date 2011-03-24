@@ -1,0 +1,11 @@
+content     foxyprivy                       chrome/content/
+skin        foxyprivy       theme_fp        chrome/skin/
+locale      foxyprivy       en-US           chrome/locale/en-US/
+locale      foxyprivy       fr              chrome/locale/fr/
+
+overlay chrome://browser/content/browser.xul	    		chrome://foxyprivy/content/overlay_toolbar.xul
+overlay chrome://browser/content/browser.xul 			chrome://foxyprivy/content/overlay_tools.xul
+overlay chrome://foxyprivy/content/config.xul 			chrome://foxyprivy/content/tabs_config/tab_serveurs.xul
+overlay chrome://foxyprivy/content/config.xul 			chrome://foxyprivy/content/tabs_config/tab_putty.xul
+overlay chrome://foxyprivy/content/config.xul 			chrome://foxyprivy/content/tabs_config/tab_ssh.xul
+overlay chrome://foxyprivy/content/config.xul 			chrome://foxyprivy/content/tabs_config/tab_raz.xul

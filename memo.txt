@@ -1,0 +1,9 @@
+  <toolbarbutton id="openButton" class="toolbarbutton-1"
+                 label="&openToolbarCmd.label;" type="menu-button"
+                 observes="cmd_openInTab"
+                 tooltiptext="&openToolbarCmd.tooltip;">
+    <menupopup>
+      <menuitem label="&newTab.label;"          command="cmd_openInTab" default="true"/>
+      <menuitem label="&newBlankPageCmd.label;" command="cmd_open"/>
+    </menupopup>
+  </toolbarbutton>

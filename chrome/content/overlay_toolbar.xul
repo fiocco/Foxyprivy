@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://foxyprivy/skin/foxyprivy.css" type="text/css"?>
+<overlay id="sample" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<script type="application/javascript" src="lib/lib_general.js"/>
+<script type="application/javascript" src="lib/lib_ssh.js" />
+<script type="application/javascript" src="lib/lib_mdp.js"/>
+<script type="application/javascript" src="overlay_toolbar.js"/>
+
+		 
+<toolbar id="nav-bar">
+      <toolbaritem class="chromeclass-toolbar-additional"> 
+	    <toolbarbutton id="foxyprivy-button" image="" label="FP" class="toolbarbutton-1" type="menu-button" oncommand="alert('tutut');">
+		  <menupopup id="foxyprivy-list"/>
+	    </toolbarbutton>
+      </toolbaritem> 
+ </toolbar>
+   
+</overlay>

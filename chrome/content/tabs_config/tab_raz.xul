@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://foxyprivy/skin/foxyprivy.css" type="text/css"?>
+<overlay xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+
+<tabpanel id="onglet_raz">
+  <vbox flex="0" style="overflow: auto;">
+    <groupbox style="margin-top:20px ;">
+      <button style="" label="Remise à zero de la liste de vos serveurs SSH" oncommand="resetServerList();" />
+      <button style="margin-top:15px;" label="Remise à zero de vos paramètres proxy" oncommand="resetProxy();" />
+    </groupbox>
+  </vbox>
+</tabpanel>  
+</overlay>
