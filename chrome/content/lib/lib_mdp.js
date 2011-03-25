@@ -1,3 +1,7 @@
+/* Creating stringbundle from locale file */
+var gfoxyprivyBundle = Components.classes["@mozilla.org/intl/stringbundle;1"].getService(Components.interfaces.nsIStringBundleService);
+var _bundle = gfoxyprivyBundle.createBundle("chrome://foxyprivy/locale/lib_pwd.properties");
+
 function existMdp(id)
 {
   var hostname = "chrome://foxyprivy" ;
@@ -24,7 +28,7 @@ function existMdp(id)
      }
   }
   catch(ex) {
-     alert("Erreur lors de la récupération du mot de passe...");
+    alert(_bundle.GetStringFromName("errorWhileRetrievingPassword"));
   }
   return returnvalue ;
 }
@@ -74,7 +78,7 @@ function getMdp(id)
      }
   }
   catch(ex) {
-     alert("Erreur lors de la récupération du mot de passe...");
+     alert(_bundle.GetStringFromName("errorWhileRetrievingPassword"));
   }
   return password ;
 }
@@ -101,7 +105,7 @@ function delMdp(id)
      }
   }
   catch(ex) {
-     alert("Erreur lors de la suppression du mot de passe...");
+     alert(_bundle.GetStringFromName("errorWhileDeletingPassword"));
   }
 }
 

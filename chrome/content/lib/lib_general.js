@@ -1,3 +1,6 @@
+/* Creating stringbundle from locale file */
+var gfoxyprivyBundle = Components.classes["@mozilla.org/intl/stringbundle;1"].getService(Components.interfaces.nsIStringBundleService);
+var _bundle = gfoxyprivyBundle.createBundle("chrome://foxyprivy/locale/lib_general.properties");
 
 
 /**
@@ -131,6 +134,6 @@ function foxyprivyIsReady()
 
 function test()
 {
-  if (window.confirm("Want to see my mood ring?")) alert("suppression");
-  else alert("ouf !"); 
+  if (window.confirm(_bundle.GetStringFromName("wantToSeeMyMoodRing"))) alert("suppression");
+  else alert(_bundle.GetStringFromName("relief")); 
 }

@@ -1,0 +1,8 @@
+<!ENTITY checkbox.tunneliser.requ.tes.dns "Tunneling DNS requests">
+<!ENTITY checkbox.manage.ff.proxy "Manage FF proxy">
+<!ENTITY checkbox.pas.de.shell "No Shell">
+<!ENTITY checkbox.utiliser.compression "Use Compression">
+<!ENTITY checkbox.utiliser.sshpass "Use SSHPass">
+<!ENTITY label.chemin.ssh "SSH Path:">
+<!ENTITY label.chemin.sshpass "SSHPass Path:">
+<!ENTITY label.numero.de.port "Port Number:">

@@ -1,3 +1,8 @@
+/* Creating stringbundle from locale file */
+var gfoxyprivyBundle = Components.classes["@mozilla.org/intl/stringbundle;1"].getService(Components.interfaces.nsIStringBundleService);
+var _bundle = gfoxyprivyBundle.createBundle("chrome://foxyprivy/locale/lib_config.properties");
+
+
 var tab_elem = ["liste_serveurs","actions_serveurs"] ;
 var numero_serveur=-1 ;
 
@@ -59,8 +64,8 @@ function readConfig()
     }
     if (document.getElementById("label_term").value=="")
     {
-      if (getOS()=="Darwin") { document.getElementById("label_term").value="Chemin Term :"; }
-      else { document.getElementById("label_term").value="Chemin Xterm :"; }
+      if (getOS()=="Darwin") { document.getElementById("label_term").value=_bundle.GetStringFromName("cheminTerm"); }
+      else { document.getElementById("label_term").value=_bundle.GetStringFromName("cheminXterm"); }
     }
     statePasswordInput();
   }
@@ -209,7 +214,7 @@ function readServerList()
 **/
 function resetServerList()
 {
-  if (window.confirm("Etes vous sur de vouloir supprimer tous vos serveurs ?"))
+  if (window.confirm(_bundle.GetStringFromName("allServerDeletionConfirm")))
   {
 	var prefs = init_foxyprivy_prefs("extensions.foxyprivy.serveur.") ;
 	var tab = new Array();
@@ -261,7 +266,7 @@ function addServer()
     // On vérifie que les champs obligatoires sont correctement renseignés
     if ( !nomInput.value || !dnsInput.value || !portInput.value || !loginInput.value )
     {
-      alert("Tous les champs en gras sont obligatoires");
+      alert(_bundle.GetStringFromName("everyFieldCompulsory"));
       return false ;
     }
     
@@ -300,7 +305,7 @@ Fonction qui charge les parametres d'un serveur dans les champs de modification
 function editServer()
 {
   numero_serveur = document.getElementById('serverListBox').selectedIndex ;
-  if (numero_serveur==-1) { alert("Aucun serveur selectionné..."); return false ; }
+  if (numero_serveur==-1) { alert(_bundle.GetStringFromName("noSelectedServer")); return false ; }
   else
   {
     var prefs = init_foxyprivy_prefs("extensions.foxyprivy.serveur."+numero_serveur+".") ;
@@ -354,12 +359,12 @@ function delServer()
   var numero = document.getElementById('serverListBox').selectedIndex ;
   if (numero==-1) 
   {
-    alert("Aucun serveur selectionné...");
+    alert(_bundle.GetStringFromName("aucunServeurSelectionn"));
     return false ;
   }
   else
   {
-    if (window.confirm("Etes vous de vouloir supprimer ce serveur ?"))
+    if (window.confirm(_bundle.GetStringFromName("serverDeletionConfirm")))
     {
       // Reorganisation des prefs qui suivent le numero de la pref supprimé
       reorganize_prefs(numero);

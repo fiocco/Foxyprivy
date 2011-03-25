@@ -1,18 +1,20 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="chrome://foxyprivy/skin/foxyprivy.css" type="text/css"?>
-<overlay xmlns:html="http://www.w3.org/1999/xhtml"
-	 xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<!DOCTYPE overlay SYSTEM "chrome://foxyprivy/locale/tab_servers.dtd" >
+<overlay xmlns:html="http://www.w3.org/1999/xhtml" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
 <script type="application/javascript" src="tab_serveurs.js" />
 
 <tabpanel id="onglet_serveurs">
 
   <!-- CONFIGS EXISTANTES -->
+
   <vbox flex="1" style="margin-top:10px;" hidden="false" id="liste_serveurs">
     <hbox>
-      <button image="chrome://foxyprivy/skin/plus20.png" oncommand="hideAllElem(); hideElem('savebutton_edit'); showElem('savebutton_add'); showElem('actions_serveurs');"/>
-      <button image="chrome://foxyprivy/skin/croix20.png" oncommand="delServer();"/>
-      <button image="chrome://foxyprivy/skin/edit20.png" oncommand="editServer(); hideElem('savebutton_add'); showElem('savebutton_edit');"/>	
+      <button image="chrome://foxyprivy/skin/plus20.png" oncommand="hideAllElem(); hideElem('savebutton_edit'); showElem('savebutton_add'); showElem('actions_serveurs');" />
+      <button image="chrome://foxyprivy/skin/croix20.png" oncommand="delServer();" />
+      <button image="chrome://foxyprivy/skin/edit20.png" oncommand="editServer(); hideElem('savebutton_add'); showElem('savebutton_edit');" />	
     </hbox>
       <listbox id="serverListBox" rows="10" flex="1" style="margin-top:15px;">
 	<listcols>
@@ -24,52 +26,59 @@
 	  <listcol flex="1" />
 	</listcols>
 	<listhead>
-	  <listheader label="Couleur" />
-	  <listheader label="Nom" />
-	  <listheader label="DNS ou IP" />
-	  <listheader label="Port" />
-	  <listheader label="Login" />
-	  <listheader label="Password" />
+	  <listheader label="&listheader.color;" />
+	  <listheader label="&listheader.name;" />
+	  <listheader label="&listheader.dns.or.ip;" />
+	  <listheader label="&listheader.port;" />
+	  <listheader label="&listheader.login;" />
+	  <listheader label="&listheader.password;" />
 	</listhead>
       </listbox>
   </vbox>
   
   <!-- AJOUT / EDITION CONFIGS -->
+
   <vbox flex="1" style="margin-top:10px;" hidden="true" id="actions_serveurs">
     <hbox>
-      <button id="savebutton_add" image="chrome://foxyprivy/skin/floppy20.png" oncommand="addServer();"/>
-      <button id="savebutton_edit" image="chrome://foxyprivy/skin/floppy20.png" oncommand="editServer_save();"/>
-      <button image="chrome://foxyprivy/skin/undo20.png" oncommand="hideAllElem(); showElem('liste_serveurs'); resetActionInput(); "/>
+      <button id="savebutton_add" image="chrome://foxyprivy/skin/floppy20.png" oncommand="addServer();" />
+      <button id="savebutton_edit" image="chrome://foxyprivy/skin/floppy20.png" oncommand="editServer_save();" />
+      <button image="chrome://foxyprivy/skin/undo20.png" oncommand="hideAllElem(); showElem('liste_serveurs'); resetActionInput(); " />
     </hbox>
     <groupbox style="margin-top:20px;">
       <!-- Nom -->
+
       <hbox align="center" style="padding:6px;">
-        <label style="width: 10em; font-weight:bold;" value="Nom :"/>
+        <label style="width: 10em; font-weight:bold;" value="&label.name;" />
         <textbox id="action_nomInput" />
       </hbox>	  
       <!-- Dns -->
+
       <hbox align="center" style="padding:6px;">
-        <label style="width: 10em; font-weight:bold;" value="DNS :"/>
+        <label style="width: 10em; font-weight:bold;" value="&label.dns;" />
         <textbox id="action_dnsInput" />
       </hbox>	  
       <!-- Port -->
+
       <hbox align="center" style="padding:6px;">
-        <label style="width: 10em; font-weight:bold;" value="Port :"/>
+        <label style="width: 10em; font-weight:bold;" value="&label.port;" />
         <textbox id="action_portInput" />
       </hbox>	  
       <!-- Login -->
+
       <hbox align="center" style="padding:6px;">
-        <label style="width: 10em; font-weight:bold;" value="Login :"/>
+        <label style="width: 10em; font-weight:bold;" value="&label.login;" />
         <textbox id="action_loginInput" />
       </hbox>	  
       <!-- Mot de passe -->
+
       <hbox align="center" style="padding:6px;">
-        <label style="width: 10em;" value="Mot de passe :"/>
+        <label style="width: 10em;" value="&label.password;" />
         <textbox id="action_passwordInput" />
       </hbox>
       <!-- Couleur -->
+
       <hbox align="center" style="padding:6px;">
-        <label style="width: 10em;" value="Couleur :"/>
+        <label style="width: 10em;" value="&color;" />
         <colorpicker style="width: 8em;" id="action_couleurInput" type="button" palettename="standard" />
       </hbox>
     </groupbox>

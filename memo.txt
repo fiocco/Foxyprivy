@@ -1,3 +1,29 @@
+        ajouter boutton ON/OFF
+        
+        popup survol boutton
+
+x       Saisie de mot de passe non obligatoire (surtout si pas sshpass)
+
+x       Mot de passe en clair dans l'UI 
+
+x       W2K Putty (image disquette + retour) 
+
+x       UTF8 sur toutes les pages !
+
+        Trouver meilleur nom pour DNS distant
+        
+x       Nb lignes de codes ?
+
+x       Modif algo stockage des mdp
+
+        Traduction par DTD
+
+
+
+
+
+
+
   <toolbarbutton id="openButton" class="toolbarbutton-1"
                  label="&openToolbarCmd.label;" type="menu-button"
                  observes="cmd_openInTab"
@@ -7,5 +33,3 @@
       <menuitem label="&newBlankPageCmd.label;" command="cmd_open"/>
     </menupopup>
   </toolbarbutton>
-  
-  toto

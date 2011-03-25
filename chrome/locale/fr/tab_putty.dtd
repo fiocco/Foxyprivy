@@ -1,0 +1,6 @@
+<!ENTITY checkbox.pipeline.dns.requests "Tunneling DNS requests">
+<!ENTITY checkbox.manage.ff.proxy "Manage FF proxy">
+<!ENTITY checkbox.no.shell "No Shell">
+<!ENTITY checkbox.use.compression "Use compression">
+<!ENTITY label.putty.path "Putty path:">
+<!ENTITY label.port.number "Port Number:">
