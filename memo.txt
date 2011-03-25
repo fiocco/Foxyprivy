@@ -8,4 +8,4 @@
     </menupopup>
   </toolbarbutton>
 
-test2
+test3
