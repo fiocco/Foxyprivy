@@ -59,7 +59,6 @@ function initServerList()
       stop.setAttribute("value","STOP");
       stop.setAttribute("label","STOP");
       stop.setAttribute("oncommand","resetProxy(); killSSH();");
-      stop.setAttribute("oncommand","alert('titi');");
       stop.setAttribute("class","menuitem-iconic");
       stop.setAttribute("style","color : #333 ; font-weight:bold ;");
       stop.setAttribute("image","chrome://foxyprivy/skin/stop16.png");
