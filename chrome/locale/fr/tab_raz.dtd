@@ -1,2 +1,2 @@
-<!ENTITY reset.button.ssh.server "Reset your SSH servers list">
-<!ENTITY reset.button.proxy.settings "Reset your Proxy parameters">
+<!ENTITY reset.button.ssh.server "Supprimer tous vos serveurs">
+<!ENTITY reset.button.proxy.settings "RAZ de vos paramètres proxy">

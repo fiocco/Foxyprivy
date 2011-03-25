@@ -1,8 +1,8 @@
-<!ENTITY checkbox.tunneliser.requ.tes.dns "Tunneling DNS requests">
-<!ENTITY checkbox.manage.ff.proxy "Manage FF proxy">
-<!ENTITY checkbox.pas.de.shell "No Shell">
-<!ENTITY checkbox.utiliser.compression "Use Compression">
-<!ENTITY checkbox.utiliser.sshpass "Use SSHPass">
-<!ENTITY label.chemin.ssh "SSH Path:">
-<!ENTITY label.chemin.sshpass "SSHPass Path:">
-<!ENTITY label.numero.de.port "Port Number:">
+<!ENTITY checkbox.tunneliser.requ.tes.dns "Tunneliser requêtes DNS">
+<!ENTITY checkbox.manage.ff.proxy "Manager proxy FF">
+<!ENTITY checkbox.pas.de.shell "Pas de Shell">
+<!ENTITY checkbox.utiliser.compression "Utiliser compression">
+<!ENTITY checkbox.utiliser.sshpass "Utiliser SSHPass">
+<!ENTITY label.chemin.ssh "Chemin SSH:">
+<!ENTITY label.chemin.sshpass "Chemin SSHPass:">
+<!ENTITY label.numero.de.port "Port numéro:">

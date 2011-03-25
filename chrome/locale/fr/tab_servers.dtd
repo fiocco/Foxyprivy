@@ -1,12 +1,12 @@
-<!ENTITY listheader.color "Color">
-<!ENTITY listheader.name "Name">
-<!ENTITY listheader.dns.or.ip "DNS or IP">
+<!ENTITY listheader.color "Couleur">
+<!ENTITY listheader.name "Nom">
+<!ENTITY listheader.dns.or.ip "DNS ou IP">
 <!ENTITY listheader.port "Port">
 <!ENTITY listheader.login "Login">
 <!ENTITY listheader.password "Password">
-<!ENTITY label.name "Name:">
+<!ENTITY label.name "Nom:">
 <!ENTITY label.dns "DNS:">
 <!ENTITY label.port "Port:">
 <!ENTITY label.login "Login :">
 <!ENTITY label.password "Password:">
-<!ENTITY color "Color:">
+<!ENTITY color "Couleur:">

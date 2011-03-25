@@ -1,5 +1,5 @@
-<!ENTITY window.configuration.foxyprivy "Foxyprivy settings">
-<!ENTITY tab.servers "Servers">
+<!ENTITY window.configuration.foxyprivy "Paramètres Foxyprivy">
+<!ENTITY tab.servers "Serveurs">
 <!ENTITY tab.putty "Putty">
 <!ENTITY tab.ssh "SSH">
-<!ENTITY tab.raz "Reset">
+<!ENTITY tab.raz "RAZ">
