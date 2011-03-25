@@ -7,10 +7,5 @@
       <menuitem label="&newBlankPageCmd.label;" command="cmd_open"/>
     </menupopup>
   </toolbarbutton>
-<<<<<<< HEAD
   
   bobo
-=======
-
-test3
->>>>>>> ab857a93443da1d413cfdb74cd86d4184fc0d41e
