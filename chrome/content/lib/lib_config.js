@@ -429,3 +429,30 @@ function statePasswordInput()
     else { document.getElementById("action_passwordInput").disabled=true ; }
   }
 }
+
+
+/**
+ * Fonction qui affiche les explications des options de SSH  
+**/
+function showExplainations(optionName)
+{
+  var _label=document.getElementById("ssh_definition") ;
+  if(optionName=="remotedns") 		{ _label.value=_bundle.GetStringFromName("explainationsRemotedns") ; }	
+  else if (optionName=="manageproxy") 	{ _label.value=_bundle.GetStringFromName("explainationsManageproxy") ; }
+  else if (optionName=="noterminal") 	{ _label.value=_bundle.GetStringFromName("explainationsNoterminal") ; }
+  else if (optionName=="compression") 	{ _label.value=_bundle.GetStringFromName("explainationsCompression") ; }
+  else if (optionName=="sshpass") 	{ _label.value=_bundle.GetStringFromName("explainationsSshpass") ; }
+  else if (optionName=="pathTerm") 	{ _label.value=_bundle.GetStringFromName("explainationsPathTerm") ; }
+  else if (optionName=="pathSsh") 	{ _label.value=_bundle.GetStringFromName("explainationsPathSsh") ; }
+  else if (optionName=="pathSshpass") 	{ _label.value=_bundle.GetStringFromName("explainationsPathSshpass") ; }
+  else if (optionName=="portNumber") 	{ _label.value=_bundle.GetStringFromName("explainationsPortNumber") ; }
+}
+
+/**
+ * Fonction qui cache les explications des options SSH
+**/
+function hideExplainations()
+{
+  var _label=document.getElementById("ssh_definition") ;
+  _label.value="" ;
+}

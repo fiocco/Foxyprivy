@@ -17,32 +17,25 @@
     <!-- TAB GAUCHE -->
  
     <groupbox>
-      <!-- <caption label="Options"/> -->
-
         <vbox>
             <!-- DNS distant ? -->
-
-            <hbox align="center" style="padding:6px;">
+            <hbox align="center" style="padding:6px;" onmouseover="showExplainations('remotedns');" onmouseout="hideExplainations();">
               <checkbox flex="1" label="&checkbox.tunneliser.requ.tes.dns;" id="param_dns_ssh" />
             </hbox>	  
             <!-- Manage proxy ? -->
-
-            <hbox align="center" style="padding:6px;">
+            <hbox align="center" style="padding:6px;" onmouseover="showExplainations('manageproxy');" onmouseout="hideExplainations();">
               <checkbox flex="1" label="&checkbox.manage.ff.proxy;" id="param_proxy_ssh" />
             </hbox>
             <!-- No terminal ? -->
-
-            <hbox align="center" style="padding:6px;">
+            <hbox align="center" style="padding:6px;" onmouseover="showExplainations('noterminal');" onmouseout="hideExplainations();">
               <checkbox flex="1" label="&checkbox.pas.de.shell;" id="param_noterminal_ssh" />
             </hbox>	  
             <!-- Compression ? -->
-
-            <hbox align="center" style="padding:6px;">
-                <checkbox flex="1" label="&checkbox.utiliser.compression;" id="param_compression_ssh" />
+            <hbox align="center" style="padding:6px;" onmouseover="showExplainations('compression');" onmouseout="hideExplainations();">
+                <checkbox flex="1" label="&checkbox.utiliser.compression;" id="param_compression_ssh"/>
             </hbox>
             <!-- SSHPass ? -->
-
-            <hbox align="center" style="padding:6px;">
+            <hbox align="center" style="padding:6px;" onmouseover="showExplainations('sshpass');" onmouseout="hideExplainations();">
                 <checkbox flex="1" label="&checkbox.utiliser.sshpass;" id="param_sshpass" />
             </hbox>  
       </vbox>
@@ -51,7 +44,6 @@
     <!-- TAB DROITE -->
 
     <groupbox style="margin-left:30px; width:370px;">
-      <!-- <caption label="SSH"/> -->
 
       <vbox flex="1" style="overflow: auto;">
         <grid>
@@ -61,30 +53,27 @@
             <column flex="1" />
 	  </columns>
 	  <rows>
+            
             <!-- Term -->
-
-            <row>
+            <row onmouseover="showExplainations('pathTerm');" onmouseout="hideExplainations();">
                 <image id="state_term" style="" src="" />
                 <label id="label_term" style="margin-top:8px;" value="" />
                 <textbox id="path_term" />
             </row>
             <!-- SSH  -->
-
-	    <row>
+	    <row onmouseover="showExplainations('pathSsh');" onmouseout="hideExplainations();">
                 <image id="state_ssh" style="" src="" />
                 <label style="margin-top:8px;" value="&label.chemin.ssh;" />
                 <textbox id="path_ssh" />
             </row>
             <!-- SSH Pass -->
-
-            <row>
+            <row onmouseover="showExplainations('pathSshpass');" onmouseout="hideExplainations();">
                 <image id="state_sshpass" style="" src="" />
                 <label style="margin-top:8px;" value="&label.chemin.sshpass;" />
                 <textbox id="path_sshpass" />
             </row>
             <!-- Numero port -->
-
-            <row>
+            <row onmouseover="showExplainations('portNumber');" onmouseout="hideExplainations();">
                 <label value="" />
                 <label style="margin-top:8px;" value="&label.numero.de.port;" />
                 <textbox id="param_portforward_ssh" />
@@ -93,7 +82,8 @@
         </grid>
       </vbox>
     </groupbox>
-  </hbox>  
+  </hbox>
+  <label id="ssh_definition" style="font-style:italic; font-weight:bold; margin:10px;" value="" />
  </vbox>
 </tabpanel>  
 </overlay>
