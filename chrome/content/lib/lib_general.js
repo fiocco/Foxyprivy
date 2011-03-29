@@ -65,6 +65,7 @@ function setProxy(port_forward,remotedns)
 	prefs.setIntPref("socks_port", port_forward);
 	if (remotedns) prefs.setBoolPref("socks_remote_dns", true);
 	prefs.setIntPref("type", 1);
+	stateImgFP("runWithProxy");   
 }
 
 /**
@@ -77,6 +78,7 @@ function resetProxy()
 	if (prefs.prefHasUserValue("socks_port")) { prefs.clearUserPref("socks_port"); }
 	if (prefs.prefHasUserValue("socks_remote_dns")) { prefs.clearUserPref("socks_remote_dns"); }
 	if (prefs.prefHasUserValue("type")) { prefs.clearUserPref("type"); }
+	stateImgFP("runWithoutProxy");   
 }
 
 

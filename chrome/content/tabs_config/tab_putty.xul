@@ -21,23 +21,19 @@
     <groupbox>
         <vbox>
             <!-- DNS distant ? -->
-
-            <hbox align="center" style="padding:6px;">
+            <hbox align="center" style="padding:6px;" onmouseover="showExplainations('remotedns');" onmouseout="hideExplainations();">
               <checkbox flex="1" label="&checkbox.pipeline.dns.requests;" id="param_dns_putty" />
             </hbox>	  
             <!-- Manage proxy ? -->
-
-            <hbox align="center" style="padding:6px;">
+            <hbox align="center" style="padding:6px;"  onmouseover="showExplainations('manageproxy');" onmouseout="hideExplainations();">
               <checkbox flex="1" label="&checkbox.manage.ff.proxy;" id="param_proxy_putty" />
             </hbox>
             <!-- No terminal ? -->
-
             <hbox align="center" style="padding:6px;">
-              <checkbox flex="1" label="&checkbox.no.shell;" id="param_noterminal_putty" />
+              <checkbox flex="1" label="&checkbox.no.shell;" id="param_noterminal_putty" onmouseover="showExplainations('noterminal');" onmouseout="hideExplainations();"/>
             </hbox>	  
             <!-- Compression ? -->
-
-            <hbox align="center" style="padding:6px;">
+            <hbox align="center" style="padding:6px;" onmouseover="showExplainations('compression');" onmouseout="hideExplainations();">
                 <checkbox flex="1" label="&checkbox.use.compression;" id="param_compression_putty" />
             </hbox>
       </vbox>
@@ -57,15 +53,13 @@
 	  </columns>
 	  <rows>
             <!-- Putty  -->
-
-	    <row>
+	    <row onmouseover="showExplainations('pathPutty');" onmouseout="hideExplainations();">
                 <image id="state_putty" style="" src="" />
                 <label style="margin-top:8px;" value="&label.putty.path;" />
                 <textbox id="path_putty" />
             </row>
             <!-- Numero port -->
-
-            <row>
+            <row onmouseover="showExplainations('portNumber');" onmouseout="hideExplainations();">
                 <label value="" />
                 <label style="margin-top:8px;" value="&label.port.number;" />
                 <textbox id="param_portforward_putty" />
@@ -74,7 +68,8 @@
         </grid>
       </vbox>
     </groupbox>
-  </hbox>  
+  </hbox>
+  <label id="putty_definition" style="font-style:italic; font-weight:bold; margin:10px;" value="" />
  </vbox>
 </tabpanel>  
 </overlay>

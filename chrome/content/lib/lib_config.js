@@ -436,16 +436,26 @@ function statePasswordInput()
 **/
 function showExplainations(optionName)
 {
-  var _label=document.getElementById("ssh_definition") ;
-  if(optionName=="remotedns") 		{ _label.value=_bundle.GetStringFromName("explainationsRemotedns") ; }	
-  else if (optionName=="manageproxy") 	{ _label.value=_bundle.GetStringFromName("explainationsManageproxy") ; }
-  else if (optionName=="noterminal") 	{ _label.value=_bundle.GetStringFromName("explainationsNoterminal") ; }
-  else if (optionName=="compression") 	{ _label.value=_bundle.GetStringFromName("explainationsCompression") ; }
-  else if (optionName=="sshpass") 	{ _label.value=_bundle.GetStringFromName("explainationsSshpass") ; }
-  else if (optionName=="pathTerm") 	{ _label.value=_bundle.GetStringFromName("explainationsPathTerm") ; }
-  else if (optionName=="pathSsh") 	{ _label.value=_bundle.GetStringFromName("explainationsPathSsh") ; }
-  else if (optionName=="pathSshpass") 	{ _label.value=_bundle.GetStringFromName("explainationsPathSshpass") ; }
-  else if (optionName=="portNumber") 	{ _label.value=_bundle.GetStringFromName("explainationsPortNumber") ; }
+  if (getOS()=="WINNT")
+  {
+    var _label=document.getElementById("putty_definition") ;
+    if (optionName=="pathPutty") 	{ _label.value=_bundle.GetStringFromName("explainationsPathPutty") ; return true ; }
+  }
+  else
+  {
+    var _label=document.getElementById("ssh_definition") ;
+    if (optionName=="sshpass") 		{ _label.value=_bundle.GetStringFromName("explainationsSshpass") ; return true ; }
+    if (optionName=="pathTerm") 	{ _label.value=_bundle.GetStringFromName("explainationsPathTerm") ; return true ; }
+    if (optionName=="pathSsh") 		{ _label.value=_bundle.GetStringFromName("explainationsPathSsh") ; return true ; }
+    if (optionName=="pathSshpass") 	{ _label.value=_bundle.GetStringFromName("explainationsPathSshpass") ; return true ; }
+  }
+  if(optionName=="remotedns") 		{ _label.value=_bundle.GetStringFromName("explainationsRemotedns") ; return true ; }	
+  if (optionName=="manageproxy") 	{ _label.value=_bundle.GetStringFromName("explainationsManageproxy") ; return true ; }
+  if (optionName=="noterminal") 	{ _label.value=_bundle.GetStringFromName("explainationsNoterminal") ; return true ; }
+  if (optionName=="compression") 	{ _label.value=_bundle.GetStringFromName("explainationsCompression") ; return true ; }
+  if (optionName=="portNumber") 	{ _label.value=_bundle.GetStringFromName("explainationsPortNumber") ; return true ; }
+
+  return false ;
 }
 
 /**
@@ -453,6 +463,7 @@ function showExplainations(optionName)
 **/
 function hideExplainations()
 {
-  var _label=document.getElementById("ssh_definition") ;
+  if (getOS()=="WINNT") { var _label=document.getElementById("putty_definition") ; }
+  else 			{ var _label=document.getElementById("ssh_definition") ; }
   _label.value="" ;
 }

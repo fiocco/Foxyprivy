@@ -10,7 +10,7 @@
 		 
 <toolbar id="nav-bar">
       <toolbaritem class="chromeclass-toolbar-additional"> 
-	    <toolbarbutton id="foxyprivy-button" image="" label="FP" class="toolbarbutton-1" type="menu-button" oncommand="alert('tutut');">
+	    <toolbarbutton id="foxyprivy-button" image="" label="FP" class="toolbarbutton-1" type="menu-button" oncommand="">
 		  <menupopup id="foxyprivy-list"/>
 	    </toolbarbutton>
       </toolbaritem> 

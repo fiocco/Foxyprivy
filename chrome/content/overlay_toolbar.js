@@ -43,6 +43,16 @@ function closeFF()
 }
 
 
+function stateImgFP(state)
+{
+  var img=document.getElementById("foxyprivy-button") ;
+  if (state=="ready") { img.setAttribute("image","chrome://foxyprivy/skin/FP.png") ; }
+  else if (state=="noready") { img.setAttribute("image","chrome://foxyprivy/skin/FPnb.png") ; }
+  else if (state=="runWithProxy") { img.setAttribute("image","chrome://foxyprivy/skin/FP_lunettes_soleil.png") ; }
+  else if (state=="runWithoutProxy") { img.setAttribute("image","chrome://foxyprivy/skin/FP_lunettes_vue.png") ; }
+}
+
+
 /**
 Fonction qui lit la liste des serveurs et qui complete le menupopup
 **/
@@ -53,7 +63,8 @@ function initServerList()
   if (mp)  { _removeAllChildren(mp); }
   if (foxyprivyIsReady())
   {
-    document.getElementById("foxyprivy-button").setAttribute("image","chrome://foxyprivy/skin/logo20.png") ;
+    //document.getElementById("foxyprivy-button").setAttribute("image","chrome://foxyprivy/skin/FP.png") ;
+    stateImgFP("ready");
     // Ajouts des boutons items statiques
     var stop = document.createElement("menuitem");
       stop.setAttribute("value","STOP");
@@ -90,7 +101,8 @@ function initServerList()
   }
   else
   {
-    document.getElementById("foxyprivy-button").setAttribute("image","chrome://foxyprivy/skin/logo20nb.png") ;
+    //document.getElementById("foxyprivy-button").setAttribute("image","chrome://foxyprivy/skin/FPnb.png") ;
+    stateImgFP("noready");
     var config = document.createElement("menuitem");
       config.setAttribute("value","Config");
       config.setAttribute("label","Configuration");

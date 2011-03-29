@@ -44,6 +44,7 @@ function killSSH()
       pidterm=-1;
       clearDarwinSSHScripts() ;  
     }
+  stateImgFP("ready"); 
 }
 
 
