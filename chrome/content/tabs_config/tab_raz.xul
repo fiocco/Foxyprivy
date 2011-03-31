@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="chrome://foxyprivy/skin/foxyprivy.css" type="text/css"?>
-
-<!DOCTYPE overlay SYSTEM "chrome://foxyprivy/locale/tab_raz.dtd" >
+<!DOCTYPE overlay SYSTEM "chrome://foxyprivy/locale/tab_raz.dtd">
 <overlay xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-
 
 <tabpanel id="onglet_raz">
   <vbox flex="0" style="overflow: auto;">

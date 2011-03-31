@@ -2,9 +2,9 @@
 <?xml-stylesheet href="chrome://foxyprivy/skin/foxyprivy.css" type="text/css"?>
 <overlay id="sample" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
-<script type="application/javascript" src="lib/lib_general.js"/>
-		 
-<menupopup id="menu_ToolsPopup">
-  <menuitem oncommand="openConfig();" label="Foxyprivy" id="foxyprivy-tools" class="menuitem-iconic" image="chrome://foxyprivy/skin/logo16.png" position="9"/>
-</menupopup>
+  <script type="application/javascript" src="lib/lib_general.js"/>
+
+  <menupopup id="menu_ToolsPopup">
+    <menuitem oncommand="openConfig();" label="Foxyprivy" id="foxyprivy-tools" class="menuitem-iconic" image="chrome://foxyprivy/skin/logo16.png" position="9"/>
+  </menupopup>
 </overlay>

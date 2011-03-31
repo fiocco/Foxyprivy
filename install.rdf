@@ -3,22 +3,46 @@
      xmlns:em="http://www.mozilla.org/2004/em-rdf#">
   <Description about="urn:mozilla:install-manifest">
     <em:id>foxyprivy@comete.info.univ-evry.fr</em:id>
+    <em:type>2</em:type>
+    <em:name>Foxyprivy</em:name>
     <em:version>0.4</em:version>
+    <em:creator>Fiocco</em:creator>
+    <em:contributor>kaze</em:contributor>
+    <em:description>Private browsing for all!</em:description>
+    <em:homepageURL>http://comete.xulfr.org/wiki/2010/projets/foxyprivy</em:homepageURL>
+
+    <!--
+      using em:localized tags now
+      https://developer.mozilla.org/en/localizing_extension_descriptions
+      -->
+    <em:localized>
+      <Description>
+        <em:locale>en-US</em:locale>
+        <em:name>Foxyprivy</em:name>
+        <em:description>Private browsing for all!</em:description>
+        <em:creator>fiocco</em:creator>
+        <em:homepageURL>http://comete.xulfr.org/wiki/2010/projets/foxyprivy</em:homepageURL>
+      </Description>
+    </em:localized>
+
+    <em:localized>
+      <Description>
+        <em:locale>fr</em:locale>
+        <em:name>Foxyprivy</em:name>
+        <em:description>Surfez à l'abri des regards !</em:description>
+        <em:creator>fiocco</em:creator>
+        <em:homepageURL>http://comete.xulfr.org/wiki/2010/projets/foxyprivy</em:homepageURL>
+      </Description>
+    </em:localized>
 
     <em:targetApplication>
       <!-- Firefox -->
       <Description>
         <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
         <em:minVersion>4.0</em:minVersion>
-        <em:maxVersion>4.0.*</em:maxVersion>
+        <em:maxVersion>4.2.*</em:maxVersion>
       </Description>
     </em:targetApplication>
-
-    <!-- front-end metadata -->
-    <em:name>Foxyprivy</em:name>
-	<em:creator>Fiocco</em:creator>
-    <em:homepageURL>http://comete.xulfr.org/wiki/2010/projets/foxyprivy</em:homepageURL>
-    <em:description>Surfez en toute liberté !</em:description>
 
   </Description>
 </RDF>

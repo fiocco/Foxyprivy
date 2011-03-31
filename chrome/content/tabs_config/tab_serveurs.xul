@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="chrome://foxyprivy/skin/foxyprivy.css" type="text/css"?>
-
-<!DOCTYPE overlay SYSTEM "chrome://foxyprivy/locale/tab_servers.dtd" >
+<!DOCTYPE overlay SYSTEM "chrome://foxyprivy/locale/tab_servers.dtd">
 <overlay xmlns:html="http://www.w3.org/1999/xhtml" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
 <script type="application/javascript" src="tab_serveurs.js" />
@@ -9,35 +8,33 @@
 <tabpanel id="onglet_serveurs">
 
   <!-- CONFIGS EXISTANTES -->
-
   <vbox flex="1" style="margin-top:10px;" hidden="false" id="liste_serveurs">
     <hbox>
       <button image="chrome://foxyprivy/skin/plus20.png" oncommand="hideAllElem(); hideElem('savebutton_edit'); showElem('savebutton_add'); showElem('actions_serveurs');" />
       <button image="chrome://foxyprivy/skin/croix20.png" oncommand="delServer();" />
-      <button image="chrome://foxyprivy/skin/edit20.png" oncommand="editServer(); hideElem('savebutton_add'); showElem('savebutton_edit');" />	
+      <button image="chrome://foxyprivy/skin/edit20.png" oncommand="editServer(); hideElem('savebutton_add'); showElem('savebutton_edit');" />  
     </hbox>
       <listbox id="serverListBox" rows="10" flex="1" style="margin-top:15px;">
-	<listcols>
-	  <listcol flex="0" />
-	  <listcol flex="1" />
-	  <listcol flex="1" />
-	  <listcol flex="1" />
-	  <listcol flex="1" />
-	  <listcol flex="1" />
-	</listcols>
-	<listhead>
-	  <listheader label="&listheader.color;" />
-	  <listheader label="&listheader.name;" />
-	  <listheader label="&listheader.dns.or.ip;" />
-	  <listheader label="&listheader.port;" />
-	  <listheader label="&listheader.login;" />
-	  <listheader label="&listheader.password;" />
-	</listhead>
+        <listcols>
+          <listcol flex="0" />
+          <listcol flex="1" />
+          <listcol flex="1" />
+          <listcol flex="1" />
+          <listcol flex="1" />
+          <listcol flex="1" />
+        </listcols>
+        <listhead>
+          <listheader label="&listheader.color;" />
+          <listheader label="&listheader.name;" />
+          <listheader label="&listheader.dns.or.ip;" />
+          <listheader label="&listheader.port;" />
+          <listheader label="&listheader.login;" />
+          <listheader label="&listheader.password;" />
+        </listhead>
       </listbox>
   </vbox>
   
   <!-- AJOUT / EDITION CONFIGS -->
-
   <vbox flex="1" style="margin-top:10px;" hidden="true" id="actions_serveurs">
     <hbox>
       <button id="savebutton_add" image="chrome://foxyprivy/skin/floppy20.png" oncommand="addServer();" />
@@ -46,37 +43,36 @@
     </hbox>
     <groupbox style="margin-top:20px;">
       <!-- Nom -->
-
       <hbox align="center" style="padding:6px;">
         <label style="width: 10em; font-weight:bold;" value="&label.name;" />
         <textbox id="action_nomInput" />
-      </hbox>	  
-      <!-- Dns -->
+      </hbox>     
 
+      <!-- Dns -->
       <hbox align="center" style="padding:6px;">
         <label style="width: 10em; font-weight:bold;" value="&label.dns;" />
         <textbox id="action_dnsInput" />
-      </hbox>	  
-      <!-- Port -->
+      </hbox>     
 
+      <!-- Port -->
       <hbox align="center" style="padding:6px;">
         <label style="width: 10em; font-weight:bold;" value="&label.port;" />
         <textbox id="action_portInput" />
-      </hbox>	  
-      <!-- Login -->
+      </hbox>     
 
+      <!-- Login -->
       <hbox align="center" style="padding:6px;">
         <label style="width: 10em; font-weight:bold;" value="&label.login;" />
         <textbox id="action_loginInput" />
-      </hbox>	  
-      <!-- Mot de passe -->
+      </hbox>     
 
+      <!-- Mot de passe -->
       <hbox align="center" style="padding:6px;">
         <label style="width: 10em;" value="&label.password;" />
         <textbox id="action_passwordInput" />
       </hbox>
-      <!-- Couleur -->
 
+      <!-- Couleur -->
       <hbox align="center" style="padding:6px;">
         <label style="width: 10em;" value="&color;" />
         <colorpicker style="width: 8em;" id="action_couleurInput" type="button" palettename="standard" />

@@ -1,75 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="chrome://foxyprivy/skin/foxyprivy.css" type="text/css"?>
-
-<!DOCTYPE overlay SYSTEM "chrome://foxyprivy/locale/tab_putty.dtd" >
+<!DOCTYPE overlay SYSTEM "chrome://foxyprivy/locale/tab_putty.dtd">
 <overlay xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
 <script type="application/javascript" src="tab_putty.js" />
 
 <tabpanel id="onglet_putty">
     
- <vbox flex="1" style="margin-top:10px;">
-  <hbox>
-    <button image="chrome://foxyprivy/skin/floppy20.png" oncommand="editConfig();" />
-    <button image="chrome://foxyprivy/skin/undo20.png" oncommand="readConfig();" />
-    <button image="chrome://foxyprivy/skin/refresh20.png" oncommand="stateSSHs(); readConfig(); reloalXUL();" />
-    <button image="chrome://foxyprivy/skin/download20.png" oncommand="setupPutty();" />
-  </hbox>
-  <hbox style="margin-top:10px;">
-    <!-- TAB GAUCHE -->
- 
-    <groupbox>
+  <vbox flex="1" style="margin-top:10px;">
+    <hbox>
+      <button image="chrome://foxyprivy/skin/floppy20.png" oncommand="editConfig();" />
+      <button image="chrome://foxyprivy/skin/undo20.png" oncommand="readConfig();" />
+      <button image="chrome://foxyprivy/skin/refresh20.png" oncommand="stateSSHs(); readConfig(); reloalXUL();" />
+      <button image="chrome://foxyprivy/skin/download20.png" oncommand="setupPutty();" />
+    </hbox>
+
+    <hbox style="margin-top:10px;">
+
+      <!-- TAB GAUCHE -->
+      <groupbox>
         <vbox>
-            <!-- DNS distant ? -->
-            <hbox align="center" style="padding:6px;" onmouseover="showExplainations('remotedns');" onmouseout="hideExplainations();">
-              <checkbox flex="1" label="&checkbox.pipeline.dns.requests;" id="param_dns_putty" />
-            </hbox>	  
-            <!-- Manage proxy ? -->
-            <hbox align="center" style="padding:6px;"  onmouseover="showExplainations('manageproxy');" onmouseout="hideExplainations();">
-              <checkbox flex="1" label="&checkbox.manage.ff.proxy;" id="param_proxy_putty" />
-            </hbox>
-            <!-- No terminal ? -->
-            <hbox align="center" style="padding:6px;">
-              <checkbox flex="1" label="&checkbox.no.shell;" id="param_noterminal_putty" onmouseover="showExplainations('noterminal');" onmouseout="hideExplainations();"/>
-            </hbox>	  
-            <!-- Compression ? -->
-            <hbox align="center" style="padding:6px;" onmouseover="showExplainations('compression');" onmouseout="hideExplainations();">
-                <checkbox flex="1" label="&checkbox.use.compression;" id="param_compression_putty" />
-            </hbox>
-      </vbox>
-    </groupbox>
-    
-    <!-- TAB DROITE -->
-
-    <groupbox style="margin-left:30px; width:370px;">
-      <!-- <caption label="SSH"/> -->
-
-      <vbox flex="1" style="overflow: auto;">
-        <grid>
-	  <columns>
-	    <column flex="0" />
-	    <column flex="0" />
-            <column flex="1" />
-	  </columns>
-	  <rows>
-            <!-- Putty  -->
-	    <row onmouseover="showExplainations('pathPutty');" onmouseout="hideExplainations();">
+          <!-- DNS distant ? -->
+          <hbox align="center" style="padding:6px;" onmouseover="showExplainations('remotedns');" onmouseout="hideExplainations();">
+            <checkbox flex="1" label="&checkbox.pipeline.dns.requests;" id="param_dns_putty" />
+          </hbox>       
+          <!-- Manage proxy ? -->
+          <hbox align="center" style="padding:6px;"  onmouseover="showExplainations('manageproxy');" onmouseout="hideExplainations();">
+            <checkbox flex="1" label="&checkbox.manage.ff.proxy;" id="param_proxy_putty" />
+          </hbox>
+          <!-- No terminal ? -->
+          <hbox align="center" style="padding:6px;">
+            <checkbox flex="1" label="&checkbox.no.shell;" id="param_noterminal_putty" onmouseover="showExplainations('noterminal');" onmouseout="hideExplainations();"/>
+          </hbox>       
+          <!-- Compression ? -->
+          <hbox align="center" style="padding:6px;" onmouseover="showExplainations('compression');" onmouseout="hideExplainations();">
+              <checkbox flex="1" label="&checkbox.use.compression;" id="param_compression_putty" />
+          </hbox>
+        </vbox>
+      </groupbox>
+      
+      <!-- TAB DROITE -->
+      <groupbox style="margin-left:30px; width:370px;">
+        <!-- <caption label="SSH"/> -->
+        <vbox flex="1" style="overflow: auto;">
+          <grid>
+            <columns>
+              <column flex="0" />
+              <column flex="0" />
+              <column flex="1" />
+            </columns>
+            <rows>
+              <!-- Putty  -->
+              <row onmouseover="showExplainations('pathPutty');" onmouseout="hideExplainations();">
                 <image id="state_putty" style="" src="" />
                 <label style="margin-top:8px;" value="&label.putty.path;" />
                 <textbox id="path_putty" />
-            </row>
-            <!-- Numero port -->
-            <row onmouseover="showExplainations('portNumber');" onmouseout="hideExplainations();">
+              </row>
+              <!-- Numero port -->
+              <row onmouseover="showExplainations('portNumber');" onmouseout="hideExplainations();">
                 <label value="" />
                 <label style="margin-top:8px;" value="&label.port.number;" />
                 <textbox id="param_portforward_putty" />
-            </row>
-          </rows>
-        </grid>
-      </vbox>
-    </groupbox>
-  </hbox>
-  <label id="putty_definition" style="font-style:italic; font-weight:bold; margin:10px;" value="" />
- </vbox>
+              </row>
+            </rows>
+          </grid>
+        </vbox>
+      </groupbox>
+
+    </hbox>
+    <label id="putty_definition" style="font-style:italic; font-weight:bold; margin:10px;" value="" />
+  </vbox>
 </tabpanel>  
 </overlay>
